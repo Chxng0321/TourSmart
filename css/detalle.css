@@ -1,0 +1,171 @@
+/* =========================
+   PAGINA DETALLE PLAYA
+========================= */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background:#f1f6fc;
+}
+
+
+/* CONTENEDOR */
+
+.detalle-container {
+
+    width:900px;
+    max-width:95%;
+    margin:40px auto;
+
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+
+    box-shadow:0 10px 35px rgba(0,0,0,0.10);
+
+}
+
+
+/* IMAGEN PRINCIPAL */
+
+.detalle-imagen {
+
+    width:100%;
+    height:350px;
+    object-fit:cover;
+
+}
+
+
+/* CONTENIDO */
+
+.detalle-contenido {
+
+    padding:35px;
+
+}
+
+
+.detalle-contenido h1 {
+
+    color:#17375d;
+    font-size:36px;
+    margin-bottom:10px;
+
+}
+
+
+.region {
+
+    color:#ef5575;
+    font-weight:600;
+    margin-bottom:15px;
+
+}
+
+
+.descripcion {
+
+    color:#556;
+    line-height:1.7;
+    margin-bottom:15px;
+
+}
+
+
+/* ACTIVIDADES */
+
+.detalle-contenido h2 {
+
+    color:#17375d;
+    margin-top:15px;
+
+}
+
+
+.actividades {
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+    margin-top:15px;
+
+}
+
+
+.actividad {
+
+    background:#edf6ff;
+    padding:15px;
+    border-radius:10px;
+    color:#244d78;
+
+}
+
+
+/* BOTON VOLVER */
+
+.btn-volver {
+
+    display:inline-block;
+
+    margin-top:25px;
+
+    background:#4285d1;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:13px 25px;
+
+    border-radius:8px;
+
+}
+
+
+.btn-volver:hover {
+
+    background:#1467ac;
+
+}
+
+
+
+/* BOTON FAVORITO */
+
+.btn-favorito {
+
+
+    position:fixed;
+
+    top:10px;
+
+    right:20px;
+
+
+    background:#ef5b78;
+
+    color:white;
+
+    border:none;
+
+    padding:12px 25px;
+
+    border-radius:10px;
+
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    z-index:999;
+
+
+}
+
+
+.btn-favorito:hover {
+
+    background:#d94362;
+
+}

@@ -1,0 +1,824 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+/* =========================
+   CONFIGURACION GENERAL
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    background:#f1f6fb;
+    color:#193755;
+
+}
+
+
+.app-container{
+
+    display:flex;
+    min-height:100vh;
+
+}
+
+
+
+/* =========================
+   SIDEBAR
+========================= */
+
+
+.sidebar{
+
+    width:230px;
+    flex-shrink:0;
+    background:white;
+    padding:28px 18px;
+    border-right:1px solid #dce8f3;
+
+}
+
+
+.sidebar h2{
+
+    color:#1877ba;
+    font-size:21px;
+    margin-bottom:40px;
+
+}
+
+
+.sidebar nav{
+
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+
+}
+
+
+.sidebar a{
+
+    display:block;
+    padding:12px 15px;
+    border-radius:8px;
+    text-decoration:none;
+    color:#415b74;
+    font-size:14px;
+
+}
+
+
+.sidebar a:hover,
+.sidebar a.activo{
+
+    background:#e0effd;
+    color:#1671b8;
+
+}
+
+
+
+/* =========================
+   FILTROS
+========================= */
+
+
+.panel-filtros{
+
+    margin-top:35px;
+    padding-top:22px;
+    border-top:1px solid #e2eaf2;
+
+}
+
+
+.panel-filtros h3{
+
+    font-size:15px;
+    margin-bottom:20px;
+
+}
+
+
+.grupo-filtro{
+
+    margin-bottom:22px;
+
+}
+
+
+.grupo-filtro label,
+.grupo-filtro p{
+
+    display:block;
+    font-size:12px;
+    font-weight:600;
+    color:#4c647c;
+    margin-bottom:9px;
+
+}
+
+
+.grupo-filtro select{
+
+    width:100%;
+    padding:10px;
+    border-radius:7px;
+    border:1px solid #dce7f1;
+    background:white;
+
+}
+
+
+.btn-limpiar{
+
+    width:100%;
+    padding:11px;
+    border-radius:7px;
+    border:1px solid #cfe1f0;
+    background:#f3f9ff;
+    color:#247abd;
+    cursor:pointer;
+
+}
+
+
+
+/* =========================
+   CONTENIDO
+========================= */
+
+
+.contenido{
+
+    flex:1;
+    padding:25px;
+
+}
+
+
+.header{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
+    margin-bottom:25px;
+
+}
+
+
+.header input{
+
+    flex:1;
+    max-width:600px;
+    padding:14px 18px;
+    border-radius:9px;
+    border:1px solid #dbe7f2;
+    font-family:inherit;
+
+}
+
+
+
+/* =========================
+   BANNER
+========================= */
+
+
+.banner{
+
+    background:linear-gradient(
+        120deg,
+        #1765a5,
+        #49b9cb
+    );
+
+    color:white;
+    padding:55px 35px;
+    border-radius:12px;
+    margin-bottom:30px;
+
+}
+
+
+.banner h1{
+
+    font-size:29px;
+
+}
+
+
+.banner p{
+
+    margin-top:8px;
+    font-size:14px;
+
+}
+
+
+
+/* =========================
+   PLAYAS
+========================= */
+
+
+.encabezado-playas{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+
+}
+
+
+
+.grid-playas{
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+
+}
+
+
+
+.tarjeta{
+
+    position:relative;
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    border:1px solid #e1eaf2;
+    box-shadow:0 4px 12px rgba(35,76,110,.05);
+    transition:.3s;
+
+}
+
+
+.tarjeta:hover{
+
+    transform:translateY(-6px);
+    box-shadow:0 10px 25px rgba(35,76,110,.12);
+
+}
+
+
+
+.foto-placeholder{
+
+    width:100%;
+    height:160px;
+    overflow:hidden;
+
+}
+
+
+
+.foto-placeholder img{
+
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.4s;
+
+}
+
+
+.tarjeta:hover img{
+
+    transform:scale(1.08);
+
+}
+
+
+
+.tarjeta-info{
+
+    padding:14px;
+
+}
+
+
+
+.tarjeta-info h3{
+
+    color:#193755;
+    font-size:15px;
+
+}
+
+
+.tarjeta-info p{
+
+    color:#71849a;
+    font-size:12px;
+    margin-top:5px;
+
+}
+
+
+
+.link-playa{
+
+    display:block;
+    text-decoration:none;
+    color:inherit;
+
+}
+
+
+.link-playa:hover{
+
+    color:inherit;
+
+}
+
+
+
+/* =========================
+   FAVORITO TARJETAS
+========================= */
+
+
+.tarjeta .btn-favorito{
+
+    position:absolute;
+
+    top:12px;
+
+    right:12px;
+
+    width:42px;
+
+    height:42px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border:none;
+
+    background:transparent;
+
+    color:white;
+
+    font-size:30px;
+
+    cursor:pointer;
+
+    text-shadow:
+    0 2px 8px rgba(0,0,0,.7);
+
+    z-index:5;
+
+}
+
+
+.tarjeta .btn-favorito:hover{
+
+    transform:scale(1.15);
+
+}
+
+
+.tarjeta .btn-favorito.guardado{
+
+    color:#ff5b7f;
+
+}
+/* =========================
+   DETALLE PLAYA
+========================= */
+
+
+.detalle-container{
+
+    position:relative;
+
+    width:100%;
+
+    max-width:1100px;
+
+    margin:40px auto;
+
+    background:white;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.10);
+
+}
+
+
+
+.detalle-container form{
+
+    position:absolute;
+
+    top:25px;
+
+    right:35px;
+
+    z-index:10;
+
+}
+
+
+
+
+.detalle-imagen{
+
+    width:100%;
+
+    height:430px;
+
+    object-fit:cover;
+
+}
+
+
+
+
+
+.detalle-info{
+
+    padding:40px;
+
+}
+
+
+
+.detalle-info h1{
+
+    font-size:38px;
+
+    color:#193755;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.detalle-info h3{
+
+    color:#e74c6b;
+
+    margin:15px 0;
+
+    font-size:16px;
+
+}
+
+
+
+.detalle-info p{
+
+    line-height:1.7;
+
+    color:#536b82;
+
+}
+
+
+
+
+
+.detalle-contenido,
+.detalle-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:35px;
+
+    margin-top:30px;
+
+}
+
+
+
+.bloque{
+
+    width:100%;
+
+}
+
+
+
+
+.actividades{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:15px;
+
+}
+
+
+
+.actividades div{
+
+    background:#edf6ff;
+
+    padding:18px;
+
+    border-radius:12px;
+
+    color:#31506c;
+
+    font-size:15px;
+
+}
+
+
+
+
+
+.direccion{
+
+    font-weight:600;
+
+    color:#193755!important;
+
+}
+
+
+
+
+
+.mapa{
+
+    width:100%;
+
+    height:350px;
+
+    border:0;
+
+    border-radius:15px;
+
+    margin-top:15px;
+
+}
+
+
+
+
+
+/* =========================
+   FAVORITO DETALLE
+========================= */
+
+
+.detalle-container .btn-favorito{
+
+
+    width:190px;
+
+    height:55px;
+
+
+    border:none;
+
+    border-radius:30px;
+
+
+    background:#ff5b7f;
+
+
+    color:white;
+
+
+    font-size:15px;
+
+
+    font-weight:700;
+
+
+    cursor:pointer;
+
+
+    box-shadow:0 8px 20px rgba(255,91,127,.35);
+
+
+}
+
+
+
+.detalle-container .btn-favorito:hover{
+
+
+    background:#e63f65;
+
+    transform:translateY(-3px);
+
+}
+
+
+
+.detalle-container .btn-favorito.guardado{
+
+    background:#20b26b;
+
+}
+
+
+
+
+
+/* =========================
+   BOTON VOLVER
+========================= */
+
+
+.volver{
+
+    display:inline-block;
+
+    margin-top:35px;
+
+    background:#4285d4;
+
+    color:white;
+
+    padding:14px 30px;
+
+    border-radius:10px;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+
+
+.volver:hover{
+
+    background:#286bb7;
+
+    transform:translateY(-2px);
+
+}
+
+
+
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+
+@media(max-width:1100px){
+
+
+.grid-playas{
+
+    grid-template-columns:repeat(3,1fr);
+
+}
+
+
+}
+
+
+
+
+@media(max-width:900px){
+
+
+.app-container{
+
+    flex-direction:column;
+
+}
+
+
+
+.sidebar{
+
+    width:100%;
+
+}
+
+
+
+.grid-playas{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+
+
+.detalle-grid,
+.detalle-contenido{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.detalle-container form{
+
+    right:20px;
+
+}
+
+
+
+}
+
+
+
+
+@media(max-width:650px){
+
+
+.grid-playas{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.header{
+
+    flex-direction:column;
+
+}
+
+
+
+.contenido{
+
+    padding:15px;
+
+}
+
+
+
+.detalle-info{
+
+    padding:25px;
+
+}
+
+
+
+.detalle-imagen{
+
+    height:260px;
+
+}
+
+
+
+.actividades{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.detalle-container form{
+
+    right:15px;
+
+}
+
+
+
+.detalle-container .btn-favorito{
+
+    width:150px;
+
+    height:45px;
+
+    font-size:13px;
+
+}
+
+
+}

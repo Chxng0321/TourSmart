@@ -1,0 +1,372 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* CONFIGURACIÓN GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f0f6fc;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+/* CONTENEDOR PRINCIPAL */
+
+.login-container {
+    display: flex;
+    width: 950px;
+    max-width: 100%;
+    min-height: 570px;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(22, 75, 130, 0.12);
+    border: 1px solid #d4e2ef;
+}
+
+/* PANEL IZQUIERDO CON IMAGEN */
+
+.login-banner {
+    width: 43%;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(21, 94, 158, 0.96) 0%,
+            rgba(31, 121, 190, 0.65) 46%,
+            rgba(15, 59, 104, 0.12) 100%
+        ),
+        url('../img/playa-login.jpg');
+
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 65px 25px;
+}
+
+.banner-contenido {
+    width: 100%;
+}
+
+.logo i {
+    font-size: 52px;
+    margin-bottom: 10px;
+}
+
+.logo h1 {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.banner-contenido p {
+    margin-top: 18px;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+/* PANEL DERECHO */
+
+.login-formulario {
+    width: 57%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 45px;
+}
+
+.formulario-contenido {
+    width: 100%;
+    max-width: 360px;
+}
+
+.formulario-contenido h2 {
+    color: #17375d;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.subtitulo {
+    color: #77899a;
+    font-size: 13px;
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+
+/* CAMPOS DEL FORMULARIO */
+
+.campo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: 1px solid #dce5ef;
+    border-radius: 8px;
+    padding: 0 14px;
+    height: 49px;
+    margin-bottom: 15px;
+    color: #536c86;
+    transition: 0.2s;
+}
+
+.campo:focus-within {
+    border-color: #2685cc;
+    box-shadow: 0 0 0 3px rgba(38, 133, 204, 0.09);
+}
+
+.campo input {
+    width: 100%;
+    min-width: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: inherit;
+    font-size: 13px;
+}
+
+.campo input::placeholder {
+    color: #8493a3;
+}
+
+/* MOSTRAR Y OCULTAR CONTRASEÑA */
+
+.ver-password {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: #536c86;
+    font-size: 15px;
+}
+
+/* OPCIONES DE INICIO DE SESIÓN */
+
+.opciones {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 24px;
+    font-size: 11px;
+}
+
+.opciones label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #536477;
+    cursor: pointer;
+}
+
+.opciones a,
+.registro a {
+    text-decoration: none;
+    color: #2382c5;
+    font-weight: 600;
+}
+
+.opciones a:hover,
+.registro a:hover {
+    text-decoration: underline;
+}
+
+/* BOTÓN PRINCIPAL */
+
+.btn-ingresar {
+    width: 100%;
+    padding: 14px;
+    background: #2385d1;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-ingresar:hover {
+    background: #1467ac;
+}
+
+.btn-ingresar:active {
+    transform: scale(0.99);
+}
+
+/* MENSAJES DEL INICIO DE SESIÓN */
+
+.mensaje-login {
+    color: #536c86;
+    font-size: 12px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.mensaje-login:empty {
+    display: none;
+}
+
+/* SEPARADOR */
+
+.separador {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 25px 0;
+    color: #8697a5;
+    font-size: 12px;
+}
+
+.separador::before,
+.separador::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #e1e9f0;
+}
+
+/* BOTÓN DE GOOGLE */
+
+.btn-google {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #c8dbe9;
+    border-radius: 7px;
+    background: white;
+    color: #356b94;
+    font-family: inherit;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-google i {
+    margin-right: 8px;
+    color: #4285f4;
+}
+
+.btn-google:hover {
+    background: #f5faff;
+}
+
+/* ENLACE DE REGISTRO */
+
+.registro {
+    text-align: center;
+    margin-top: 35px;
+    font-size: 12px;
+    color: #64778a;
+}
+
+/* MENSAJES DEL REGISTRO */
+
+.alerta {
+    padding: 12px 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.alerta.exito {
+    background: #e9f8ef;
+    color: #17653a;
+    border: 1px solid #a6dfb8;
+}
+
+.alerta.error {
+    background: #fff0f0;
+    color: #a62b2b;
+    border: 1px solid #f4b5b5;
+}
+
+/* MEJORAS VISUALES DEL REGISTRO */
+
+.formulario-contenido form {
+    width: 100%;
+}
+
+.formulario-contenido .campo:hover {
+    border-color: #a8c9e5;
+}
+
+.formulario-contenido a {
+    transition: color 0.2s ease;
+}
+
+.formulario-contenido a:hover {
+    color: #125c9a;
+}
+
+/* ACCESIBILIDAD */
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+    outline: 2px solid #2385d1;
+    outline-offset: 3px;
+}
+
+/* ADAPTACIÓN A TABLETS */
+
+@media (max-width: 900px) {
+    .login-container {
+        width: 100%;
+    }
+
+    .login-formulario {
+        padding: 35px;
+    }
+
+    .logo h1 {
+        font-size: 28px;
+    }
+}
+
+/* ADAPTACIÓN A CELULARES */
+
+@media (max-width: 700px) {
+    body {
+        padding: 15px;
+    }
+
+    .login-container {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .login-banner,
+    .login-formulario {
+        width: 100%;
+    }
+
+    .login-banner {
+        min-height: 225px;
+        padding: 35px 20px;
+    }
+
+    .login-formulario {
+        padding: 35px 22px;
+    }
+
+    .logo h1 {
+        font-size: 27px;
+    }
+
+    .formulario-contenido h2 {
+        font-size: 23px;
+    }
+
+    .opciones {
+        flex-wrap: wrap;
+    }
+}
